@@ -36,6 +36,9 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser((id, done) => {
+    // myDB.findOne({_id: new ObjectID(id)}, (err, doc) => {
+    //     done(null, null);
+    // });
     done(null, null);
 });
 
