@@ -28,6 +28,17 @@ Content-Type: text/html; charset=utf-8
 //     saveUninitialized: true,
 //     cookie: {secure: false}
 // }));
+
+//persistent login session
+passport.serializeUser((user, done) => {
+    done(null, user._id);
+});
+
+passport.deserializeUser((id, done) => {
+    done(null, null);
+});
+
+
 app.set('view engine', 'pug');
 
 
